@@ -102,7 +102,7 @@ const Home = (props) => {
 
 export const getServerSideProps = async () => {
   console.log("aa")
-  const response = await fetch("https://tag-dao-project.vercel.app/api/token/readall")  
+  const response = await fetch("https://tag-dao-project-mv16mjtpa-akiyoshi-yagi.vercel.app/api/token/readall")  
   const allTokens = await response.json() 
   console.log(allTokens);
   return{

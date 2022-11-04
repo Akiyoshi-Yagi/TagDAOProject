@@ -48,7 +48,7 @@ const ReadAllProposals = (props) => {
 export default ReadAllProposals
 
 export const getServerSideProps = async() => {
-    const response = await fetch("https://tag-dao-project.vercel.app/api/proposal/readall")   
+    const response = await fetch("https://tag-dao-project-mv16mjtpa-akiyoshi-yagi.vercel.app/api/proposal/readall")   
     //console.log(response)
     const allProposals = await response.json()   
     console.log(allProposals)
