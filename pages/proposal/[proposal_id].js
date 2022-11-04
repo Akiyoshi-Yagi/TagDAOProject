@@ -74,7 +74,7 @@ export default ReadSingleProposal
 
 export const getServerSideProps = async(context) => {
     //console.log(context.query.proposal_id)
-    const response = await fetch(`https://tag-dao-project-mv16mjtpa-akiyoshi-yagi.vercel.app/api/proposal/${context.query.proposal_id}`)  
+    const response = await fetch(`https://tag-dao-project-git-main-akiyoshi-yagi.vercel.app/api/proposal/${context.query.proposal_id}`)  
     const singleProposal = await response.json()
     console.log(singleProposal.proposal)
 
