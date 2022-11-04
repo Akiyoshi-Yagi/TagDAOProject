@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import styles from '../styles/Landing.module.css'
 import Swal from 'sweetalert2'
+import Link from "next/link"
 
 export default function Landing(props) {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -66,7 +67,7 @@ export default function Landing(props) {
         <Image src="/tagdao.png"  width={600} height={500} />
 
         <div className={styles.grid}>
-          <a className={styles.card} onClick={connectWallet}>
+          <Link className={styles.card} onClick={connectWallet}>
             <h2>connect wallet &rarr;</h2>
             <p>
               Before starting, 
@@ -74,7 +75,7 @@ export default function Landing(props) {
             <p> 
               you need to install and connedt your metamask
             </p>
-          </a>
+          </Link>
         </div>
       </main>
 

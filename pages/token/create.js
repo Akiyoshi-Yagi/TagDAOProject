@@ -4,6 +4,7 @@ import Web3 from "web3";
 import { contractAbi, contractAddress, zeroAddress } from "../../utils/smartcontract";
 import styles from "../../styles/applicationToken.module.css"
 import Swal from 'sweetalert2'
+import Link from "next/link"
 
 
 const CreateTokenProposal = (props) => {
@@ -114,7 +115,7 @@ const CreateTokenProposal = (props) => {
                 
             </table>
             <div className={styles.submitfield}>
-                <a href="" className = {styles.submitbutton}  onClick={submitApplication}><span>SUBMIT</span></a>
+                <button className = {styles.submitbutton}  onClick={submitApplication}><span>SUBMIT</span></button>
             </div>
             
         </div>

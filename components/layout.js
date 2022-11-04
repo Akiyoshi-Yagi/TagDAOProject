@@ -3,6 +3,7 @@ import Swal from 'sweetalert2'
 import { useState, useEffect } from "react";
 import styles from "./component.module.css"
 import Web3 from "web3";
+import Link from "next/link"
 
 function Layout({ children }) {
     const [currentAccount, setCurrentAccount] = useState("");
@@ -63,21 +64,21 @@ function Layout({ children }) {
         <div className={styles.site_header}>
             <div className={styles.site_header__wrapper}>
                 <div className={styles.site_header__start}>
-                    <a href="/home" className={styles.brand}>TAG DAO</a>
+                    <Link href="/home" className={styles.brand}>TAG DAO</Link>
                 </div>
                 <div className={styles.site_header__middle}>
                     <nav className={styles.nav}>
                         <ul className={styles.nav__wrapper}>
-                            <li className={styles.nav__item}><a href="/home">Home</a></li>
-                            <li className={styles.nav__item}><a href="/token/readall">Registered Tokens</a></li>
-                            <li className={styles.nav__item}><a href="token/create">Token Application</a></li>
-                            <li className={styles.nav__item}><a href="/proposal/readall">Proposals</a></li>
-                            <li className={styles.nav__item}><a href="/holder/menu">NFT Holder Only</a></li>
+                            <li className={styles.nav__item}><Link href="/home">Home</Link></li>
+                            <li className={styles.nav__item}><Link href="/token/readall">Registered Tokens</Link></li>
+                            <li className={styles.nav__item}><Link href="token/create">Token Application</Link></li>
+                            <li className={styles.nav__item}><Link href="/proposal/readall">Proposals</Link></li>
+                            <li className={styles.nav__item}><Link href="/holder/menu">NFT Holder Only</Link></li>
                         </ul>
                     </nav>
                 </div>
                 <div className={styles.site_header__end}>
-                    <a className={styles.button} onClick={connectWallet}> Connect Wallet</a>
+                    <button className={styles.button} onClick={connectWallet}> Connect Wallet</button>
                 </div>
             </div>
         </div>

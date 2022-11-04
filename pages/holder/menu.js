@@ -115,7 +115,7 @@ const Holder = (props) => {
           <li>Token Registration</li>
             If the vote is won, the Token is recorded on the blockchain along with its Tag information.
             <div className={styles.button_loc}>
-                  <a className={styles.button} onClick={transtionTagProposal}> propose Tag list update</a>
+                  <button className={styles.button} onClick={transtionTagProposal}> propose Tag list update</button>
           </div>
         </ol>
         </div>
@@ -131,14 +131,14 @@ const Holder = (props) => {
               </thead>
               <tbody className={styles.Table_Body}>
               {props.allTokens.map(Token => 
-                <Link href={`/Token/${Token[0]}`} key={Token}>
+              
                     
-                    <tr className={styles.Table_Body_Row}>
+                <tr className={styles.Table_Body_Row}>
                     <td className={styles.Table_Head_Row_Cell}  >{Token[0]}</td>
                     <td className={styles.Table_Head_Row_Cell}>{Token[1]}</td>
                     <td className={styles.Table_Head_Row_Cell}>{Token[2]},{Token[3]},{Token[4]}</td>
                 </tr>
-                </Link>
+             
                 )} 
             </tbody>
           </table>
@@ -159,7 +159,7 @@ const Holder = (props) => {
           <li>Token Registration</li>
             If the vote is won, the Token is recorded on the blockchain along with its Tag information.
           <div className={styles.button_loc}>
-                  <a className={styles.button} onClick={transtionWithdrawPage}> check your deposit</a>
+                  <button className={styles.button} onClick={transtionWithdrawPage}> check your deposit</button>
           </div>
           </div>
           

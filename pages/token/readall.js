@@ -1,6 +1,6 @@
-import Link from "next/link"
 import { useRouter } from 'next/router'
 import styles from "../../styles/TokenList.module.css"
+
 
 const ReadAllTokens = (props) => {
     const router = useRouter()
@@ -27,7 +27,7 @@ const ReadAllTokens = (props) => {
                     <td className={styles.Table_Head_Row_Cell}  >{Token[0]}</td>
                     <td className={styles.Table_Head_Row_Cell}>{Token[1]}</td>
                     <td className={styles.Table_Head_Row_Cell}>{Token[2]},{Token[3]},{Token[4]}</td>
-                    <a className={styles.button} > Update / delete Token</a>
+                    <button className={styles.button} > Update / delete Token</button>
                 </tr>
                 
 

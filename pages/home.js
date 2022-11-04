@@ -33,7 +33,7 @@ const Home = (props) => {
     return (
     <div>
       <div className={styles.body_upper}>
-          <h1>TAG DAO is a community in which all kinds of Tokens are "tagged" decentrallly by full-onchian voting system.</h1>
+          <h1>TAG DAO is a community in which all kinds of Tokens are tagged decentrallly by full-onchian voting system.</h1>
       </div>
 
       <h1>Token Registration</h1>
@@ -61,14 +61,12 @@ const Home = (props) => {
               </thead>
               <tbody className={styles.Table_Body}>
               {props.allTokens.map(Token => 
-                <Link href={`/Token/${Token[0]}`} key={Token}>
                     
-                    <tr className={styles.Table_Body_Row}>
+                <tr className={styles.Table_Body_Row}>
                     <td className={styles.Table_Head_Row_Cell}  >{Token[0]}</td>
                     <td className={styles.Table_Head_Row_Cell}>{Token[1]}</td>
                     <td className={styles.Table_Head_Row_Cell}>{Token[2]},{Token[3]},{Token[4]}</td>
                 </tr>
-                </Link>
                 )} 
             </tbody>
           </table>
