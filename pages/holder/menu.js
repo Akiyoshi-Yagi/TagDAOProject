@@ -174,7 +174,7 @@ const Holder = (props) => {
 
 export const getServerSideProps = async () => {
   console.log("aa")
-  const response = await fetch("https://tag-dao-project-git-main-akiyoshi-yagi.vercel.app/api/token/readall")  
+  const response = await fetch("https://tag-dao-project-akiyoshi-yagi.vercel.app/api/token/readall")  
   const allTokens = await response.json() 
   console.log(allTokens);
   return{

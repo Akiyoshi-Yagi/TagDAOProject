@@ -126,7 +126,7 @@ export default CreateTokenProposal
 
 
 export const getServerSideProps = async() => {
-    const response = await fetch("https://tag-dao-project-git-main-akiyoshi-yagi.vercel.app/api/token/create")   
+    const response = await fetch("https://tag-dao-project-akiyoshi-yagi.vercel.app/api/token/create")   
     const allTags = await response.json() 
     console.log(allTags);
 
