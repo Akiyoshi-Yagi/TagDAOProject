@@ -43,21 +43,7 @@
     padding-left:120px;
     padding-right:30px
 }
-
-.button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  color: #fff;
-  background-color: orange;
-  min-width: 120px;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.button_loc{
-  padding-top: 2rem;
-  padding-left: 15rem;
-
+.eachButton{
+    display:flex;
+    width:500px
 }

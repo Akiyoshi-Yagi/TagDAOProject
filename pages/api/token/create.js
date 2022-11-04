@@ -1,6 +1,6 @@
-import { contractAbi,contractAddress} from "../../../utils/smartcontract"; 
+import { contractAbi, contractAddress } from "../../../utils/smartcontract";
 
-const getAllTokens = async(req, res) => {
+const getAllTags = async(req, res) => {
     try{
         console.log("aaa")
         const Web3 = require("web3");
@@ -9,9 +9,9 @@ const getAllTokens = async(req, res) => {
         //let result = await web3.eth.getBalance("0x5dcE2f6D2C427dC122cAe63174730D33Cb39c0A1");
         
         try {
-            new web3.eth.Contract(contractAbi, contractAddress).methods.tokenProposals(req.query.proposal_id).call().then(proposal => {
-                //console.log(proposal);
-                return res.status(200).json({message: "fetch success", proposal: proposal});
+            new web3.eth.Contract(contractAbi, contractAddress).methods.tagList().call().then(allTags => {
+                console.log(allTags);
+                return res.status(200).json({message: "fetch success", allTags: allTags});
             });
         } catch (error) {
             console.log(error);
@@ -23,4 +23,4 @@ const getAllTokens = async(req, res) => {
     }
 }
 
-export default getAllTokens
+export default getAllTags

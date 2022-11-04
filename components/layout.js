@@ -1,0 +1,91 @@
+import Swal from 'sweetalert2'
+//import { nftAddress, nftAbi } from '../utils/smartcontract';
+import { useState, useEffect } from "react";
+import styles from "./component.module.css"
+import Web3 from "web3";
+
+function Layout({ children }) {
+    const [currentAccount, setCurrentAccount] = useState("");
+    
+    const checkIfWalletIsConnected = async () => {
+        const { ethereum } = window;
+        if (!ethereum) {
+          console.log("Make sure you have MetaMask!");
+          return;
+        } else {
+          console.log("We have the ethereum object", ethereum);
+        }
+  
+        const accounts = await ethereum.request({ method: "eth_accounts" });
+    
+        if (accounts.length !== 0) {
+          const account = accounts[0];
+          console.log("Found an authorized account:", account);
+          setCurrentAccount(account);
+          localStorage.setItem("address", account);
+        } else {
+          console.log("No authorized account found");
+        }
+      };
+    
+    
+    const connectWallet = async (e) => {
+        try {
+          const { ethereum } = window;
+          if (!ethereum) {
+            Swal.fire("Get MetaMask!");
+            return;
+          }
+  
+          if(currentAccount){
+            Swal.fire("already connected!")  
+            return;
+          };
+          
+          const accounts = await ethereum.request({
+            method: "eth_requestAccounts",
+          });
+          console.log("Connected", accounts[0]);
+
+          setCurrentAccount(accounts[0]);
+          localStorage.setItem("address", accounts[0])
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+    useEffect(() => {
+        checkIfWalletIsConnected();
+    }, []);
+
+    return (
+    <div>
+        <div className={styles.site_header}>
+            <div className={styles.site_header__wrapper}>
+                <div className={styles.site_header__start}>
+                    <a href="/home" className={styles.brand}>TAG DAO</a>
+                </div>
+                <div className={styles.site_header__middle}>
+                    <nav className={styles.nav}>
+                        <ul className={styles.nav__wrapper}>
+                            <li className={styles.nav__item}><a href="/home">Home</a></li>
+                            <li className={styles.nav__item}><a href="/token/readall">Registered Tokens</a></li>
+                            <li className={styles.nav__item}><a href="token/create">Token Application</a></li>
+                            <li className={styles.nav__item}><a href="/proposal/readall">Proposals</a></li>
+                            <li className={styles.nav__item}><a href="/holder/menu">NFT Holder Only</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div className={styles.site_header__end}>
+                    <a className={styles.button} onClick={connectWallet}> Connect Wallet</a>
+                </div>
+            </div>
+        </div>
+        <main>
+            {children}
+        </main>   
+    </div>
+    )
+  };
+  
+  export default Layout
