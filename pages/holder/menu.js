@@ -133,7 +133,7 @@ const Holder = (props) => {
               {props.allTokens.map(Token => 
               
                     
-                <tr className={styles.Table_Body_Row}>
+                <tr className={styles.Table_Body_Row} key={Token[0]}>
                     <td className={styles.Table_Head_Row_Cell}  >{Token[0]}</td>
                     <td className={styles.Table_Head_Row_Cell}>{Token[1]}</td>
                     <td className={styles.Table_Head_Row_Cell}>{Token[2]},{Token[3]},{Token[4]}</td>
