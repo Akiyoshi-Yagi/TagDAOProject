@@ -72,7 +72,7 @@ const ReadSingleProposal = (props) => {
 
 export default ReadSingleProposal
 
-export const getStaticProps = async(context) => {
+export const getServerSideProps = async(context) => {
     //console.log(context.query.proposal_id)
     const response = await fetch(`http://localhost:3000/api/proposal/${context.query.proposal_id}`)  
     const singleProposal = await response.json()

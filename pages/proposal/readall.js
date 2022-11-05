@@ -29,7 +29,7 @@ const ReadAllProposals = (props) => {
                       <td className={styles.Table_Head_Row_Cell_content}>{Proposal[5][3]}, {Proposal[5][4]}, {Proposal[5][5]}</td>
                       <td className={styles.Table_Head_Row_Cell_content}>{Proposal[3]}</td>
                       <td className={styles.buttonField}>
-                         <Link  href={"/proposal/${Propposal[0]}"} className={styles.button} > Vote </Link>
+                         <Link  href={`/proposal/${Proposal[0]}`} className={styles.button} > Vote </Link>
                       </td>
                       
                       
