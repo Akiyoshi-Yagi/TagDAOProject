@@ -83,7 +83,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
     //console.log(context.query.proposal_id)
-    const response = await fetch(`https://tag-dao-project-hack-akiyoshi-yagi.vercel.app/api/proposal/${params.id}`)  
+    const response = await fetch(`https://tag-dao-project-hack.vercel.app/api/proposal/${params.id}`)  
     const singleProposal = await response.json()
     console.log(singleProposal.proposal)
 

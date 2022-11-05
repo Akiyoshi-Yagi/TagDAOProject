@@ -102,7 +102,7 @@ const Home = (props) => {
 
 export const getStaticProps = async () => {
   console.log("aa")
-  const response = await fetch("https://tag-dao-project-hack-akiyoshi-yagi.vercel.app/api/token/readall")  
+  const response = await fetch("https://tag-dao-project-hack.vercel.app/api/token/readall")  
   const allTokens = await response.json() 
   console.log(allTokens);
   return{
