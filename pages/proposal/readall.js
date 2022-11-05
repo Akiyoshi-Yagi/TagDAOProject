@@ -29,7 +29,7 @@ const ReadAllProposals = (props) => {
                       <td className={styles.Table_Head_Row_Cell_content}>{Proposal[5][3]}, {Proposal[5][4]}, {Proposal[5][5]}</td>
                       <td className={styles.Table_Head_Row_Cell_content}>{Proposal[3]}</td>
                       <td className={styles.buttonField}>
-                         <Link  href={`/proposal/${Proposal[0]}`} className={styles.button} > Vote </Link>
+                         <Link  href={{pathname:`/proposal/${Proposal[0]}`}} className={styles.button} > Vote </Link>
                       </td>
                       
                       
@@ -47,7 +47,7 @@ const ReadAllProposals = (props) => {
 
 export default ReadAllProposals
 
-export const getStaticProps = async() => {
+export const getServerSideProps = async() => {
     const response = await fetch("https://tag-dao-project.vercel.app/api/proposal/readall")   
     //console.log(response)
     const allProposals = await response.json()   

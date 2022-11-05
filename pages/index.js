@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import styles from '../styles/Landing.module.css'
 import Swal from 'sweetalert2'
+import Link from "next/link";
 
 
 export default function Landing(props) {
@@ -83,7 +84,7 @@ export default function Landing(props) {
   )
 }
 
-export const getStaticProps = async (context) => ({
+export const getServerSideProps = async (context) => ({
   props: {
     layout: true
   }
