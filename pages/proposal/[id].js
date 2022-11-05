@@ -76,7 +76,9 @@ export default ReadSingleProposal
 export async function getStaticPaths() {
     return {
       // `paths`にid=1,2のみを定義。これらのパスはBuild時に生成される
-      paths: [{ params: { id: "0"} }, { params: { id: "1" } }, { params: { id: "2" } }, { params: { id: "3" } }, { params: { id: "4" } } ],
+      paths: [{ params: { id: "0"} }, { params: { id: "1" } }, { params: { id: "2" } }, { params: { id: "3" } }, { params: { id: "4" } },
+      { params: { id: "5"} }, { params: { id: "6" } }, { params: { id: "7" } }, { params: { id: "8" } }, { params: { id: "9" } } ,
+      { params: { id: "10"} }, { params: { id: "11" } }, { params: { id: "12" } }, { params: { id: "13" } }, { params: { id: "14" } }],
       // id=3を許容できるようにfallback: trueを設定する
       fallback: true,
     }
@@ -84,7 +86,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
     //console.log(context.query.proposal_id)
-    const response = await fetch(`http://localhost:3000/api/proposal/${params.id}`)  
+    const response = await fetch(`https://tag-dao-project.vercel.app/api/proposal/${params.id}`)  
     const singleProposal = await response.json()
     console.log(singleProposal.proposal.appendToken)
 

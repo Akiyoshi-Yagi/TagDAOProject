@@ -71,7 +71,7 @@ function Layout({ children }) {
                         <ul className={styles.nav__wrapper}>
                             <li className={styles.nav__item}><Link href="/home">Home</Link></li>
                             <li className={styles.nav__item}><Link href="/token/readall">Registered Tokens</Link></li>
-                            <li className={styles.nav__item}><Link href="token/create">Token Application</Link></li>
+                            <li className={styles.nav__item}><Link href="/token/create">Token Application</Link></li>
                             <li className={styles.nav__item}><Link href="/proposal/readall">Proposals</Link></li>
                             <li className={styles.nav__item}><Link href="/holder/menu">NFT Holder Only</Link></li>
                         </ul>

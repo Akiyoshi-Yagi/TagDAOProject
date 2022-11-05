@@ -48,7 +48,7 @@ const ReadAllProposals = (props) => {
 export default ReadAllProposals
 
 export const getStaticProps = async() => {
-    const response = await fetch("http://localhost:3000/api/proposal/readall")   
+    const response = await fetch("https://tag-dao-project.vercel.app/api/proposal/readall")   
     //console.log(response)
     const allProposals = await response.json()   
     console.log(allProposals)
