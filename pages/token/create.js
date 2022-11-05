@@ -125,8 +125,8 @@ const CreateTokenProposal = (props) => {
 export default CreateTokenProposal
 
 
-export const getServerSideProps = async() => {
-    const response = await fetch("https://tag-dao-project-akiyoshi-yagi.vercel.app/api/token/create")   
+export const getStaticProps = async() => {
+    const response = await fetch("http://localhost:3000/api/token/create")   
     const allTags = await response.json() 
     console.log(allTags);
 

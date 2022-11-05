@@ -41,8 +41,8 @@ const ReadAllTokens = (props) => {
 
 export default ReadAllTokens
 
-export const getServerSideProps = async() => {
-    const response = await fetch("https://tag-dao-project-akiyoshi-yagi.vercel.app/api/token/readall")   
+export const getStaticProps = async() => {
+    const response = await fetch("http://localhost:3000/api/token/readall")   
     const allTokens = await response.json() 
     console.log(allTokens);
 

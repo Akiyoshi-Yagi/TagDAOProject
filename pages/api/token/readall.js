@@ -5,7 +5,7 @@ const getAllTokens = async(req, res) => {
         //console.log("aaa")
         const Web3 = require("web3");
         const web3 = new Web3();
-        web3.setProvider(new web3.providers.HttpProvider(process.env.INFURA_API))
+        web3.setProvider(new web3.providers.HttpProvider(process.env.NEXT_PUBLIC_INFURA_API))
         //let result = await web3.eth.getBalance("0x5dcE2f6D2C427dC122cAe63174730D33Cb39c0A1");
         
         try {
