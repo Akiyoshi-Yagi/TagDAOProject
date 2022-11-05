@@ -12,7 +12,7 @@ const ReadAllTokens = (props) => {
         <div>
             <h1> Registerd Tokens List</h1>
             
-          {/* <table className={styles.Table}>
+          <table className={styles.Table}>
             <thead className={styles.Table_Head}>
               <tr className={styles.Table_Head_Row}>
                   <th className={styles.Table_Head_Row_Cell}>symbol</th>
@@ -33,7 +33,7 @@ const ReadAllTokens = (props) => {
 
                 )} 
             </tbody>
-          </table> */}
+          </table>
             
         </div>
     )
@@ -41,12 +41,12 @@ const ReadAllTokens = (props) => {
 
 export default ReadAllTokens
 
-// export const getStaticProps = async() => {
-//     const response = await fetch("https://tag-dao-project-hack.vercel.app/api/token/readall")   
-//     const allTokens = await response.json() 
-//     console.log(allTokens);
+export const getStaticProps = async() => {
+    const response = await fetch("https://tag-dao-project.vercel.app/api/token/readall")   
+    const allTokens = await response.json() 
+    console.log(allTokens);
 
-//     return{
-//         props: allTokens 
-//     }
-// }
+    return{
+        props: allTokens 
+    }
+}
