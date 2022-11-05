@@ -16,8 +16,8 @@ const ReadAllTokens = (props) => {
                 <h1 className = {styles.appListTitle}> Application List</h1>
                 <h2>Here are all registerd Token on TAG DAO smart contract.  </h2>
                 <h3>・TAG DAO smart contract address ：{contractAddress} </h3>
-                <h3>・You can use "Token - Tag info" in many use case as explained home page.</h3>
-                <h3>・You can access all the data on smart conrtact. Call function "tokenList()" returns all registerd token. Please try it.</h3>
+                <h3>・You can use Token - Tag info in many use case as explained home page.</h3>
+                <h3>・You can access all the data on smart conrtact. Call function tokenList() returns all registerd token. Please try it.</h3>
             </div>
             
             <table className={styles.Table}>

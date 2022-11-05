@@ -15,10 +15,10 @@ const ReadAllProposals = (props) => {
                 <h1 className = {styles.appListTitle}> Application List</h1>
                 <h2>Here are all applications submitted to TAG DAO smart contract.  </h2>
                 <h3>・Only TAG DAO Token holder can vote for them. </h3>
-                <h3>・If you contribute Tagging Tokens by voting and your vote turns out to be "correct" (=majority), 
+                <h3>・If you contribute Tagging Tokens by voting and your vote turns out to be correct (=majority), 
                     you can receive reward.</h3>
                 <h3>・The amount of the reward depends on when in the voting period the vote is cast; the earlier the vote, the higher the reward.</h3>
-                <h3>・Rewards are calculated automatically and are tied to the holder's account on TAGDAO , which can be withdrawn at any time.</h3>
+                <h3>・Rewards are calculated automatically and are tied to the holders account on TAGDAO , which can be withdrawn at any time.</h3>
             </div>
             
             <table className={styles.Table}>
