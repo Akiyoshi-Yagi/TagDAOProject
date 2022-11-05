@@ -72,9 +72,18 @@ const ReadSingleProposal = (props) => {
 
 export default ReadSingleProposal
 
-export const getServerSideProps = async(context) => {
+export async function getStaticPaths() {
+    return {
+      // `paths`にid=1,2のみを定義。これらのパスはBuild時に生成される
+      paths: [{ params: { id: "0"} }, { params: { id: "1" } }, { params: { id: "2" } }, { params: { id: "3" } }, { params: { id: "4" } } ],
+      // id=3を許容できるようにfallback: trueを設定する
+      fallback: false,
+    }
+}
+
+export async function getStaticProps({params}) {
     //console.log(context.query.proposal_id)
-    const response = await fetch(`https://tag-dao-project-hack-akiyoshi-yagi.vercel.app/api/proposal/${context.query.proposal_id}`)  
+    const response = await fetch(`http://localhost:3000/api/proposal/${params.id}`)  
     const singleProposal = await response.json()
     console.log(singleProposal.proposal)
 
@@ -82,3 +91,4 @@ export const getServerSideProps = async(context) => {
         props: singleProposal
     }
 }
+

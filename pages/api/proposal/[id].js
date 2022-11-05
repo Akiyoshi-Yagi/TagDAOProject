@@ -9,7 +9,7 @@ const getAllTokens = async(req, res) => {
         //let result = await web3.eth.getBalance("0x5dcE2f6D2C427dC122cAe63174730D33Cb39c0A1");
         
         try {
-            new web3.eth.Contract(contractAbi, contractAddress).methods.tokenProposals(req.query.proposal_id).call().then(proposal => {
+            new web3.eth.Contract(contractAbi, contractAddress).methods.tokenProposals(req.query.id).call().then(proposal => {
                 //console.log(proposal);
                 return res.status(200).json({message: "fetch success", proposal: proposal});
             });
