@@ -47,8 +47,10 @@ const CreateTokenProposal = (props) => {
     }
 
     return (
-        <div className = {styles.body}>
-            <h1 className="page-title">Token Application</h1>
+        // <div className = {styles.body}>
+        <div>
+            <h1>aaa</h1>
+            {/* <h1 className="page-title">Token Application</h1>
             <h3 className="page-title">Plaease fulllfill the below form in ENGLISH.</h3>
             <h3 className="page-title">※ An Application takes 1 ETH per token regardless of whether it accepted or not.</h3>
             
@@ -116,7 +118,7 @@ const CreateTokenProposal = (props) => {
             </table>
             <div className={styles.submitfield}>
                 <button className = {styles.submitbutton}  onClick={submitApplication}><span>SUBMIT</span></button>
-            </div>
+            </div> */}
             
         </div>
     )
@@ -125,15 +127,15 @@ const CreateTokenProposal = (props) => {
 export default CreateTokenProposal
 
 
-export const getStaticProps = async() => {
-    const response = await fetch("https://tag-dao-project-hack.vercel.app/api/token/create")   
-    const allTags = await response.json() 
-    console.log(allTags);
+// export const getStaticProps = async() => {
+//     const response = await fetch("https://tag-dao-project-hack.vercel.app/api/token/create")   
+//     const allTags = await response.json() 
+//     console.log(allTags);
 
-    return{
-        props: allTags 
-    }
-}
+//     return{
+//         props: allTags 
+//     }
+// }
 
 
 //next-dev.js?3515:20 Warning: Each child in a list should have a unique "key" prop.

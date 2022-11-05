@@ -12,7 +12,7 @@ const ReadAllProposals = (props) => {
         <div>
             <h1> Proposal List</h1>
             
-            <table className={styles.Table}>
+            {/* <table className={styles.Table}>
               <thead className={styles.Table_Head}>
                 <tr className={styles.Table_Head_Row}>
                     <th className={styles.Table_Head_Row_Cell}>symbol</th>
@@ -38,7 +38,7 @@ const ReadAllProposals = (props) => {
   
                   )} 
               </tbody>
-            </table>
+            </table> */}
 
         
         </div>
@@ -47,12 +47,12 @@ const ReadAllProposals = (props) => {
 
 export default ReadAllProposals
 
-export const getStaticProps = async() => {
-    const response = await fetch("https://tag-dao-project-hack.vercel.app/api/proposal/readall")   
-    //console.log(response)
-    const allProposals = await response.json()   
-    console.log(allProposals)
-    return{
-        props: allProposals 
-    }
-}
+// export const getStaticProps = async() => {
+//     const response = await fetch("https://tag-dao-project-hack.vercel.app/api/proposal/readall")   
+//     //console.log(response)
+//     const allProposals = await response.json()   
+//     console.log(allProposals)
+//     return{
+//         props: allProposals 
+//     }
+// }

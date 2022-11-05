@@ -32,7 +32,8 @@ const Home = (props) => {
     }
     return (
     <div>
-      <div className={styles.body_upper}>
+      <h1>sss</h1>
+      {/* <div className={styles.body_upper}>
           <h1>TAG DAO is a community in which all kinds of Tokens are tagged decentrallly by full-onchian voting system.</h1>
       </div>
 
@@ -91,7 +92,7 @@ const Home = (props) => {
           </div>
           </div>
           
-      </div>
+      </div> */}
 
     </div>
 
@@ -100,17 +101,17 @@ const Home = (props) => {
   };
   export default Home;
 
-export const getStaticProps = async () => {
-  console.log("aa")
-  const response = await fetch("https://tag-dao-project-hack.vercel.app/api/token/readall")  
-  const allTokens = await response.json() 
-  console.log(allTokens);
-  return{
-    props: allTokens 
-  }
+// export const getStaticProps = async () => {
+//   console.log("aa")
+//   const response = await fetch("https://tag-dao-project-hack.vercel.app/api/token/readall")  
+//   const allTokens = await response.json() 
+//   console.log(allTokens);
+//   return{
+//     props: allTokens 
+//   }
   
 
-}
+// }
 
 
       

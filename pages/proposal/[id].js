@@ -51,7 +51,8 @@ const ReadSingleProposal = (props) => {
     }
     return (
         <div className="grid-container-si">
-            <div>
+            <h2>投票</h2>
+            {/* <div>
                 <h1>{props.proposal.appendToken[1]}</h1>
                 <h1>{props.proposal.appendToken[2]}</h1>
                 <h1>{props.proposal.appendToken[3]}, {props.proposal.appendToken[4]},  {props.proposal.appendToken[5]}</h1>
@@ -65,30 +66,30 @@ const ReadSingleProposal = (props) => {
                     <button onClick={pollAgainst}>反対</button>
                     
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
 
 export default ReadSingleProposal
 
-export async function getStaticPaths() {
-    return {
-      // `paths`にid=1,2のみを定義。これらのパスはBuild時に生成される
-      paths: [{ params: { id: "0"} }, { params: { id: "1" } }, { params: { id: "2" } }, { params: { id: "3" } }, { params: { id: "4" } } ],
-      // id=3を許容できるようにfallback: trueを設定する
-      fallback: false,
-    }
-}
+// export async function getStaticPaths() {
+//     return {
+//       // `paths`にid=1,2のみを定義。これらのパスはBuild時に生成される
+//       paths: [{ params: { id: "0"} }, { params: { id: "1" } }, { params: { id: "2" } }, { params: { id: "3" } }, { params: { id: "4" } } ],
+//       // id=3を許容できるようにfallback: trueを設定する
+//       fallback: true,
+//     }
+// }
 
-export async function getStaticProps({params}) {
-    //console.log(context.query.proposal_id)
-    const response = await fetch(`https://tag-dao-project-hack.vercel.app/api/proposal/${params.id}`)  
-    const singleProposal = await response.json()
-    console.log(singleProposal.proposal)
+// export async function getStaticProps({params}) {
+//     //console.log(context.query.proposal_id)
+//     const response = await fetch(`https://tag-dao-project-hack.vercel.app/api/proposal/${params.id}`)  
+//     const singleProposal = await response.json()
+//     console.log(singleProposal.proposal)
 
-    return{
-        props: singleProposal
-    }
-}
+//     return{
+//         props: singleProposal
+//     }
+// }
 

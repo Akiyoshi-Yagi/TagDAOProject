@@ -99,7 +99,9 @@ const Holder = (props) => {
     }, []);
     return (
     <div>
-      <div className={styles.body_upper}>
+      <h1>aaa</h1>
+      
+      {/* <div className={styles.body_upper}>
           <h1>This is a page only for Tag DAO Token Holder.</h1>
       </div>
 
@@ -163,7 +165,7 @@ const Holder = (props) => {
           </div>
           </div>
           
-      </div>
+      </div> */}
 
     </div>
 
@@ -172,15 +174,15 @@ const Holder = (props) => {
   };
 
 
-export const getStaticProps = async () => {
-  console.log("aa")
-  const response = await fetch("https://tag-dao-project-hack.vercel.app/api/token/readall")  
-  const allTokens = await response.json() 
-  console.log(allTokens);
-  return{
-    props: allTokens 
-  }
-}
+// export const getStaticProps = async () => {
+//   console.log("aa")
+//   const response = await fetch("https://tag-dao-project-hack.vercel.app/api/token/readall")  
+//   const allTokens = await response.json() 
+//   console.log(allTokens);
+//   return{
+//     props: allTokens 
+//   }
+// }
 
 export default Holder;
 
