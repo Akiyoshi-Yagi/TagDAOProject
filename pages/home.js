@@ -102,7 +102,7 @@ const Home = (props) => {
 
 export const getStaticProps = async () => {
   console.log("aa")
-  const response = await fetch("http://localhost:3000/api/token/readall")  
+  const response = await fetch("https://tag-dao-project.vercel.app/api/token/readall")  
   const allTokens = await response.json() 
   console.log(allTokens);
   return{
