@@ -52,9 +52,10 @@ const ReadSingleProposal = (props) => {
     return (
         <div className="grid-container-si">
             <div>
+                {/* <h1>{props.proposal.appendToken[0]}</h1>
                 <h1>{props.proposal.appendToken[1]}</h1>
                 <h1>{props.proposal.appendToken[2]}</h1>
-                <h1>{props.proposal.appendToken[3]}, {props.proposal.appendToken[4]},  {props.proposal.appendToken[5]}</h1>
+                <h1>{props.proposal.appendToken[3]}, {props.proposal.appendToken[4]},  {props.proposal.appendToken[5]}</h1> */}
                 <h1>{props.proposal.description}</h1>
                 <h1>{props.proposal.status}</h1>
                 <h1>{props.proposal.epairTimeStamp}</h1>
@@ -83,9 +84,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
     //console.log(context.query.proposal_id)
-    const response = await fetch(`https://tag-dao-project.vercel.app/api/proposal/${params.id}`)  
+    const response = await fetch(`http://localhost:3000/api/proposal/${params.id}`)  
     const singleProposal = await response.json()
-    console.log(singleProposal.proposal)
+    console.log(singleProposal.proposal.appendToken)
 
     return{
         props: singleProposal
