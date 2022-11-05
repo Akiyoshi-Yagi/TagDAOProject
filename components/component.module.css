@@ -1,34 +1,26 @@
-.brand {
-    font-weight: bold;
-    color: orange;
-    font-size: 30px;
-    padding :10rm }
-  
+
 .site_header {
-  position: relative;
-  background-color: #d80303; }
-
-
+  margin: 0px;
+  padding: 0px; }
 
 .site_middle {
-  position: relative;
-  background-color: #db1046; }
+  position: relative; }
 
 .site_header__middle {
   position: relative;
   background-color: black; }
 .site_header__end {
-  padding-right: 5rem;
+  padding-right: 3rem;
 }
 
 .site_header__wrapper {
+  margin: 0px;
+  padding: 0px;
   position: relative;
   background-color: black;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
+  justify-content: space-between; }
 @media (min-width: 630px) {
   .site_header__wrapper {
     justify-content: initial; } }
@@ -41,7 +33,12 @@
     padding-right: 10rem; } }
 
 .site_header__start {
-  padding-left: 10rm}
+  padding-left: 10rm;
+  font-weight: bold;
+  color: orange;
+  font-size: 50px;
+  padding :10rm;
+  margin:20px }
 
 @media (min-width: 630px) {
   .nav__wrapper {
@@ -54,7 +51,7 @@
     right: 0;
     left: 0;
     z-index: -1;
-    background-color: #d9f0f7;
+    background-color: #c90c91;
     visibility: hidden;
     opacity: 0;
     transform: translateY(-100%);
@@ -67,17 +64,9 @@
 .nav__item a {
   display: block;
   color:orange;
-  padding: 1.5rem; }
-
-.nav__toggle {
-  display: none;
-  color:orange }
-  @media (max-width: 629px) {
-    .nav__toggle {
-      display: block;
-      position: absolute;
-      right: 1rem;
-      top: 1rem; } }
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 20px }
 
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
@@ -119,7 +108,7 @@
   }
 }
 
-.button--icon {
-  min-width: initial;
-  padding: 0.5rem;
+.commonBody{
+  margin: 0px;
+  padding: 0px;
 }

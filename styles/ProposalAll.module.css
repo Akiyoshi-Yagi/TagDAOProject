@@ -1,12 +1,26 @@
+.appListTitle{
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  color: black;/*文字色*/
+  background: #f4f4f4;/*背景色*/
+  border-left: solid 5px #e2820e;/*左線*/
+  border-bottom: solid 3px #d7d7d7;/*下線*/
+}
+.body_upper{
+  margin-left:70px;
+}
 .Table {
-    width: 100%;
+    margin-left:60px;
+    margin-right:60px;
+    width: 90%;
     border-collapse: collapse;
-    background: #fff;
-    font-size: 16px;
+    background: #edef7a;
+    font-size: 18px;
+    font-family:arial black;
+    border: 2px #808080 solid; 
   }
   @media screen and (max_width: 768px) {
     .Table {
-      font-size: 12px;
+      font-size: 15px;
     }
   }
   .Table_Head {
@@ -17,6 +31,15 @@
     padding-bottom: 0.75em;
     padding-left: 0em;
     padding-right: 0.3em;
+    border: 2px #808080 solid; 
+  }
+
+  .Table_Head_Row_Cell_tag {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    padding-left: 0em;
+    padding-right: 0.3em;
+    border: 2px #808080 solid; 
   }
   .Table_Body_Row:nth_child(even) {
     background: rgb(225, 137, 13);
@@ -32,9 +55,12 @@
 .Table_Head_Row_Cell_content{
     padding-top: 2em;
     padding-bottom: 0.75em;
-    padding-left: 10em;
+    padding-left: 3em;
     padding-right: 0.5em;
+    border: 2px #808080 solid; 
 }
+
+
 
 
 
@@ -44,18 +70,17 @@
 }
 
 .button {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    color: #fff;
-    background-color: rgb(225, 137, 13);
-    min-width: 120px;
-    padding:  0.5rem;
-    border-radius: 5px;
-    text-align: center;
+  display: inline-block;
+  padding: 16px 24px;
+  text-decoration: none;
+  border: 1px;
+  background: rgb(223, 11, 53);;
+  color: #fff;
+  box-shadow: 0px 2px 4px #575;
+    
   }
   
 .buttonField{
-    padding-top:  1rem;
-    padding-left: 2rem
+    padding-left: 1rem;
+    border: 2px #808080 solid; 
 }

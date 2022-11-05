@@ -58,7 +58,7 @@ const ReadSingleProposal = (props) => {
     return (
         <div className="grid-container-si">
             <div>
-                <h1>{props.proposal.appendToken[0]}</h1>
+                <h1>{props.proposal.id}</h1>
                 <h1>{props.proposal.appendToken[1]}</h1>
                 <h1>{props.proposal.appendToken[2]}</h1>
                 <h1>{props.proposal.appendToken[3]}, {props.proposal.appendToken[4]},  {props.proposal.appendToken[5]}</h1>

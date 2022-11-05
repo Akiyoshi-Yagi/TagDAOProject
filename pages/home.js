@@ -31,67 +31,75 @@ const Home = (props) => {
         }
     }
     return (
-    <div>
-      <div className={styles.body_upper}>
-          <h1>TAG DAO is a community in which all kinds of Tokens are tagged decentrallly by full-onchian voting system.</h1>
-      </div>
-
-      <h1>Token Registration</h1>
-      <div className={styles.body}>
-        <div className={styles.left_body}>
-        <h2>Registration steps</h2>
-        <ol>
-          <li>Token Application</li>
-            Representative of the Token community submit αn application to TAG DAO.
-          <li>Vote in TAG DAO</li>
-            TAG DAO member (=NFT Holder) vote on whether to grant the token application.
-          <li>Token Registration</li>
-            If the vote is won, the Token is recorded on the blockchain along with its Tag information.
-        </ol>
+    <div className = {styles.body}>
+     
+        <div className={styles.body_upper}>
+            <h1 className = {styles.serviceName}>TAG DAO</h1>
+              <h1> is a DAO in which all kinds of Tokens are "Tagged" </h1>
+              <h1>in a decentral way by Full-Onchian Voting System on Ethereum.</h1>
         </div>
-        <div className={styles.right_body}>
-          <h2>Latest Registered Tokens</h2>
-          <table className={styles.Table}>
-            <thead className={styles.Table_Head}>
-              <tr className={styles.Table_Head_Row}>
-                  <th className={styles.Table_Head_Row_Cell}>symbol</th>
-                  <th className={styles.Table_Head_Row_Cell}>contractAddress</th>
-                  <th className={styles.Table_Head_Row_Cell}>Tags</th>
-              </tr>
-              </thead>
-              <tbody className={styles.Table_Body}>
-              {props.allTokens.map(Token => 
+        <div>
+          <h1 className = {styles.whyWeDoTitle}>Why We Do</h1> 
+          <h2>The evolution of web3 has hit a wall because of the anonymity of the wallet. </h2><h2>To avoid this problem, the current trend is to derive the nature of the wallet owner from the tokens (FT, NFT, SBT) held in the wallet. </h2><h2>To do this, it is necessary to identify what kind of token it is by linking the token to a human-identifiable "Tag".
+          </h2><h2>This DAO is useful in a variety of cases by recording "Token - Tag Link" information in a decentralized, on-chain way.
+          </h2>
+          <h1 className = {styles.whyWeDoTitle}>Tag Use Case</h1> 
+            <h2>・Update conventional DAO Voting System</h2>
+              <h3>
+              In the current DAO, the weight of votes is proportional to the amount of tokens held, which is not decentralized. By using "tag", for example, in the case of a finance-related vote in an environmental DAO, the weight of the vote can be increased for those who own more tokens with the "environmental/finance tag", resulting in a more optimal choice for the community.
+              </h3>
+            <h2>・Job Matching</h2>
+             <h3>As the number of DAOs increases, the recruitment of workers will increase. At this time, by using tags to understand the characteristics of wallet holders, it is possible to efficiently reach the desired workers. Matching services using Tags will also emerge.</h3>
+            <h2>・Derive credit information for Lending Defi </h2>
+              <h3>
+              The problem with Defi's current Lending service is that it is unable to obtain trust information, making low-collateral lending impossible." Tag" can be used to understand the characteristics of the wallet and calculate the lending risk.
+              </h3>
+            
+        </div>
+        <div>
+            <h1 className = {styles.registrationDemoTitle}>TAG DAO Overview</h1>
+            <h2>TAG DAO overview is below.</h2>
+            <h2>In addition to this, the discussion on the set of "Tags" itself is also decided by a vote in TAG DAO.</h2>
+            <div className={styles.overviewimage}>
+              <Image src="/overview.png"  width={1000} height={550} />
+            </div>
+        </div>
+        <div>
+            <h1 className = {styles.whyWeDoTitle}>TAG DAO Token Utility</h1> 
+            <div className={styles.body_bottom}>
+                <div className={styles.nftimage}>
+                    <Image src="/nft.jpg"  width={550} height={400} />
+                </div>    
+                <div className={styles.utilityExp}>
+                  <div >
+                    <h3>・Vote Right</h3>
+                      <h4>
+                      TAG DAO token holder (=TAG DAO member) can participate in votes on Token Register application 
+                      </h4>
+                    <h3>・Vote Reward</h3>
+                    <h4>
+                    TAG DAO token holder can recieve reward for their votes activities.
+                    </h4>
+                      
+                    <h3>・Priority access right</h3>
+                    <h4>
+                    We plan to expand into a variety of business using "Tag". Token Holder can access it more quickly.
+                    </h4>
+                  </div>
                     
-                <tr className={styles.Table_Body_Row} key={Token[0]}>
-                    <td className={styles.Table_Head_Row_Cell}  >{Token[0]}</td>
-                    <td className={styles.Table_Head_Row_Cell}>{Token[1]}</td>
-                    <td className={styles.Table_Head_Row_Cell}>{Token[2]},{Token[3]},{Token[4]}</td>
-                </tr>
-                )} 
-            </tbody>
-          </table>
+                    <div className={styles.button_loc}>
+                        <h2 >Join TAG DAO and make the world more decentralized!</h2>
+                        <a className={styles.button} onClick={mintTagDaoToken}> Mint NFT</a>
+                    </div>
+
+                  
+                </div> 
+
+              
+            </div>
         </div>
-      </div>
-      <h1>TAG DAO Token Utility</h1>
-      <div className={styles.body_bottom}>
-          
-          <div className={styles.nftimage}>
-          <Image src="/nft.jpg"  width={400} height={300} />
-          </div>    
-          <div>
-      
-          <li>Voting Right</li>
-            NFT Holder can participate the judgements of the  
-          <li>Vote in TAG DAO</li>
-            TAG DAO member (=NFT Holder) vote on whether to grant the token application.
-          <li>Token Registration</li>
-            If the vote is won, the Token is recorded on the blockchain along with its Tag information.
-          <div className={styles.button_loc}>
-                  <a className={styles.button} onClick={mintTagDaoToken}> Mint NFT</a>
-          </div>
-          </div>
-          
-      </div>
+        
+        
 
     </div>
 

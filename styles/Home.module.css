@@ -1,5 +1,39 @@
+.body{
+  margin : 20px;
+}
+.body_upper{
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 150px
+}
+
+.serviceName{
+  font-size: 100px;
+}
+.registrationDemo {
+  display: flex;
+  width: 100%;
+ justify-content: space-between;
+}
+
+.whyWeDoTitle{
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  color: black;/*文字色*/
+  background: #f4f4f4;/*背景色*/
+  border-left: solid 5px #e2820e;/*左線*/
+  border-bottom: solid 3px #d7d7d7;/*下線*/
+
+}
+
+.registrationDemoTitle{
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  color: black;/*文字色*/
+  background: #f4f4f4;/*背景色*/
+  border-left: solid 5px #e2820e;/*左線*/
+  border-bottom: solid 3px #d7d7d7;/*下線*/
+}
 .Table {
-    width: 100vh;
+    width: 100%;
     border-collapse: collapse;
     background: #fff;
     font-size: 16px;
@@ -9,39 +43,17 @@
       font-size: 12px;
     }
   }
-  .Table_Head {
-    background: rgb(225, 137, 13);
-  }
-  .Table_Head_Row_Cell {
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-  .Table_Body_Row:nth_child(even) {
-    background: rgb(225, 137, 13);
-  }
-  .Table_Body_Row_Cell {
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
+ .overviewimage{
+  text-align: center;
+ }
 
-.body {
-    display: flex;
-    width: 100%;
-   justify-content: space-between;
-}
 .body_bottom{
     display: flex;
     width: 100%;
 }
 .nftimage{
-    padding-top:10px;
-    padding-bottom:20px;
-    padding-left:120px;
-    padding-right:30px
+  text-align: center;
+    
 }
 
 .button {
@@ -54,10 +66,14 @@
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-align: center;
+  font-size: 40px;
 }
 
 .button_loc{
-  padding-top: 2rem;
-  padding-left: 15rem;
+  padding-top:0px;
+  text-align: center;
 
+}
+.utilityExp{
+  margin-left:20px;
 }

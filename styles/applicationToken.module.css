@@ -15,6 +15,13 @@
     margin: 60px auto 40px;
   }
    
+.title{
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  color: black;/*文字色*/
+  background: #f4f4f4;/*背景色*/
+  border-left: solid 5px #e2820e;/*左線*/
+  border-bottom: solid 3px #d7d7d7;/*下線*/
+}
   
   .button {
     -moz-appearance: none;
@@ -75,7 +82,7 @@
 
 .submitfield{
   padding:20px;
-  padding-left:375px;
+  padding-left:330px;
   margin-left: auto;
   margin-right: auto;
   width: 200em
@@ -88,7 +95,7 @@
   padding:5px;
   margin-left: auto;
   margin-right: auto;
-  width: em;
+  width: 200px
 }
 
 .submitbutton:hover {

@@ -48,9 +48,9 @@ const CreateTokenProposal = (props) => {
 
     return (
         <div className = {styles.body}>
-            <h1 className="page-title">Token Application</h1>
-            <h3 className="page-title">Plaease fulllfill the below form in ENGLISH.</h3>
-            <h3 className="page-title">※ An Application takes 1 ETH per token regardless of whether it accepted or not.</h3>
+            <h1 >Token Application</h1>
+            <h3>Plaease fulllfill the below form in ENGLISH.</h3>
+            <h3>※ An Application takes 1 ETH per token regardless of whether it accepted or not.</h3>
             
             <table className="form-table">
                 <tbody>
@@ -125,7 +125,7 @@ const CreateTokenProposal = (props) => {
 export default CreateTokenProposal
 
 
-export const getServerSideProps = async() => {
+export const getStaticProps = async() => {
     const response = await fetch("https://tag-dao-project.vercel.app/api/token/create")   
     const allTags = await response.json() 
     console.log(allTags);

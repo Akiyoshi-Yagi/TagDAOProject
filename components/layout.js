@@ -64,15 +64,15 @@ function Layout({ children }) {
         <div className={styles.site_header}>
             <div className={styles.site_header__wrapper}>
                 <div className={styles.site_header__start}>
-                    <Link href="/home" className={styles.brand}>TAG DAO</Link>
+                    <Link href="/home">TAG DAO</Link>
                 </div>
                 <div className={styles.site_header__middle}>
                     <nav className={styles.nav}>
                         <ul className={styles.nav__wrapper}>
                             <li className={styles.nav__item}><Link href="/home">Home</Link></li>
                             <li className={styles.nav__item}><Link href="/token/readall">Registered Tokens</Link></li>
-                            <li className={styles.nav__item}><Link href="/token/create">Token Application</Link></li>
-                            <li className={styles.nav__item}><Link href="/proposal/readall">Proposals</Link></li>
+                            <li className={styles.nav__item}><Link href="/token/create">Registration Application</Link></li>
+                            <li className={styles.nav__item}><Link href="/proposal/readall">Vote for application</Link></li>
                             <li className={styles.nav__item}><Link href="/holder/menu">NFT Holder Only</Link></li>
                         </ul>
                     </nav>
@@ -82,9 +82,10 @@ function Layout({ children }) {
                 </div>
             </div>
         </div>
-        <main>
-            {children}
-        </main>   
+        <div className = {styles.commonBody}>
+          {children}
+        </div>
+               
     </div>
     )
   };
