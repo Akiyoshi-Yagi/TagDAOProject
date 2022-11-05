@@ -52,7 +52,7 @@ const Home = (props) => {
              <h3>As the number of DAOs increases, the recruitment of workers will increase. At this time, by using tags to understand the characteristics of wallet holders, it is possible to efficiently reach the desired workers. Matching services using Tags will also emerge.</h3>
             <h2>・Derive credit information for Lending Defi </h2>
               <h3>
-              The problem with Defi's current Lending service is that it is unable to obtain trust information, making low-collateral lending impossible. Tag can be used to understand the characteristics of the wallet and calculate the lending risk.
+              The problem with Defi current Lending service is that it is unable to obtain trust information, making low-collateral lending impossible. Tag can be used to understand the characteristics of the wallet and calculate the lending risk.
               </h3>
             
         </div>
