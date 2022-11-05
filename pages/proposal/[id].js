@@ -51,11 +51,12 @@ const ReadSingleProposal = (props) => {
     }
     return (
         <div className="grid-container-si">
-            <div>
-                {/* <h1>{props.proposal.appendToken[0]}</h1>
+            <h1>comming soon</h1>
+            {/* <div>
+                <h1>{props.proposal.appendToken[0]}</h1>
                 <h1>{props.proposal.appendToken[1]}</h1>
                 <h1>{props.proposal.appendToken[2]}</h1>
-                <h1>{props.proposal.appendToken[3]}, {props.proposal.appendToken[4]},  {props.proposal.appendToken[5]}</h1> */}
+                <h1>{props.proposal.appendToken[3]}, {props.proposal.appendToken[4]},  {props.proposal.appendToken[5]}</h1>
                 <h1>{props.proposal.description}</h1>
                 <h1>{props.proposal.status}</h1>
                 <h1>{props.proposal.epairTimeStamp}</h1>
@@ -66,7 +67,7 @@ const ReadSingleProposal = (props) => {
                     <button onClick={pollAgainst}>反対</button>
                     
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
