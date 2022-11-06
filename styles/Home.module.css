@@ -67,11 +67,15 @@
   border-radius: 5px;
   text-align: center;
   font-size: 40px;
+  width: 200px;
+  justify-content: center;
+  margin-left:250px;
 }
 
 .button_loc{
   padding-top:0px;
   text-align: center;
+  
 
 }
 .utilityExp{

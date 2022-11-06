@@ -89,7 +89,9 @@ const Home = (props) => {
                     
                     <div className={styles.button_loc}>
                         <h2 >Join TAG DAO and make the world more decentralized!</h2>
-                        <a className={styles.button} onClick={mintTagDaoToken}> Mint NFT</a>
+                        <div className={styles.button}>
+                          <Link href="/home"  onClick={mintTagDaoToken}> Mint NFT</Link>
+                        </div>
                     </div>
 
                   

@@ -1,0 +1,61 @@
+.fullbody{
+    margin : 10px;
+   
+  }
+
+  .title{
+    padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+    color: black;/*文字色*/
+    background: #f4f4f4;/*背景色*/
+    border-left: solid 5px #e2820e;/*左線*/
+    border-bottom: solid 3px #d7d7d7;/*下線*/
+    margin-left:50px;
+  }
+
+  .body_upper{
+    display:flex;
+    margin-left : 10px;
+  }
+
+  .body_middle{
+    display:flex;
+    margin-left : 10px;
+  }
+
+  .body_middlebottom{
+    margin-left : 10px;
+    padding-bottom:10px
+  }
+
+  .body_bottom{
+    text-align: center;
+
+  }
+  .votingButton{
+    display:flex;
+    margin-left:110px;
+  }
+
+  .button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    color: #fff;
+    background-color: orange;
+    min-width: 120px;
+    padding: 01rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 40px;
+    width: 200px;
+    justify-content: center;
+    margin-left:270px;
+  }
+
+  .voteCheck
+{
+    text-decoration:underline solid blue
+}
+.applicationFull{
+    background-color: #ebc18e;
+}
