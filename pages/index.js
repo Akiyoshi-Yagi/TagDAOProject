@@ -39,10 +39,13 @@ export default function Landing(props) {
       }
 
       if(currentAccount){
-          localStorage.setItem("address", currentAccount)
-          Swal.fire("already connected!");
-          router.push("/home")
-          return;
+          const accounts = await ethereum.request({ method: "eth_accounts" });
+          if (accounts.length !== 0) {
+            localStorage.setItem("address", accounts[0])
+            Swal.fire("already connected!");
+            router.push("/home")
+            return;
+          }
       };
       
       const accounts = await ethereum.request({

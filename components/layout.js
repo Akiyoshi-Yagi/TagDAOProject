@@ -39,8 +39,12 @@ function Layout({ children }) {
           }
   
           if(currentAccount){
-            Swal.fire("already connected!")  
-            return;
+            const accounts = await ethereum.request({ method: "eth_accounts" });
+            if(accounts.length !== 0){
+              Swal.fire("already connected!")  
+              return;
+            }
+            
           };
           
           const accounts = await ethereum.request({
