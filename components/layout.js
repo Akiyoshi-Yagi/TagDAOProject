@@ -73,7 +73,7 @@ function Layout({ children }) {
                             <li className={styles.nav__item}><Link href="/token/readall">Registered Tokens</Link></li>
                             <li className={styles.nav__item}><Link href="/token/create">Registration Application</Link></li>
                             <li className={styles.nav__item}><Link href="/proposal/readall">Vote for application</Link></li>
-                            <li className={styles.nav__item}><Link href="/holder/menu">NFT Holder Only</Link></li>
+                            <li className={styles.nav__item}><Link href="/holder/menu">Token Holder Only</Link></li>
                         </ul>
                     </nav>
                 </div>

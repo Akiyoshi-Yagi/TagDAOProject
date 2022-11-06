@@ -71,6 +71,7 @@ const Home = (props) => {
                     <Image src="/nft.jpg"  width={550} height={400} />
                 </div>    
                 <div className={styles.utilityExp}>
+                  <h3>price&#058;&ensp;0.1ETH&ensp;(low setting because of dev test phase.)</h3> 
                   <div >
                     <h3>・Vote Right</h3>
                       <h4>
@@ -91,11 +92,7 @@ const Home = (props) => {
                         <h2 >Join TAG DAO and make the world more decentralized!</h2>
                         <button  className={styles.button} onClick={mintTagDaoToken}> Mint NFT</button>
                     </div>
-
-                  
                 </div> 
-
-              
             </div>
         </div>
         

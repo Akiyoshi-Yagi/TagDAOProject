@@ -48,12 +48,16 @@ const CreateTokenProposal = (props) => {
 
     return (
         <div>
-                <h1 className = {styles.title}>Token Application</h1>
+            <h1 className = {styles.title}>Token Application</h1>
+            <div className = {styles.body_upper}>
+                <h2>Here is the token registration application form. </h2>
+                <h3>・Please fill in all fields in English.</h3>
+                <h3>・Whether or not the application for registration is accepted, an application fee of 1 ETH will be charged at the time of application.</h3>
+                <h3>・Tags can be selected from those registered on the smart contract.</h3>
+                <h3>・If you wish to update the set of Tags, become a member of DAO and apply for the change.</h3>
+            </div>
             <div className = {styles.body}>
-                <h3>Plaease fulllfill the below form in ENGLISH.</h3>
-                <h3>※ An Application takes 1 ETH per token regardless of whether it accepted or not.</h3>
-                
-                <table className="form-table">
+                <table className={styles.form_table}>
                     <tbody>
                         <tr>
                             <th>Symbol</th>
@@ -74,17 +78,17 @@ const CreateTokenProposal = (props) => {
                             
                             <td>  
                                 <div className={styles.cp_ipselect.cp_sl02}>
-                                    <select onChange={(e) => setTag1(e.target.value) } required>
+                                    <select className={styles.selectTag} onChange={(e) => setTag1(e.target.value) } required>
                                         <option value="" hidden>Choose</option>
                                         {props.allTags.map(Tag => 
                                         <option key={Tag} value={Tag}  type="text" name="tag1" > {Tag}</option>)}
                                     </select>
-                                    <select onChange={(e) => setTag2(e.target.value) }required>
-                                        <option value="" hidden>Choose</option>
+                                    <select className={styles.selectTag} onChange={(e) => setTag2(e.target.value) }required>
+                                        <option  value="" hidden>Choose</option>
                                         {props.allTags.map(Tag =>
-                                        <option key={Tag}  value={Tag}  type="text" name="tag2" > {Tag}</option>)}
+                                        <option  key={Tag}  value={Tag}  type="text" name="tag2" > {Tag}</option>)}
                                     </select>
-                                    <select onChange={(e) => setTag3(e.target.value) } required>
+                                    <select className={styles.selectTag} onChange={(e) => setTag3(e.target.value) } required>
                                         <option value="" hidden>Choose</option>
                                         {props.allTags.map(Tag => 
                                         <option key={Tag}  value={Tag}  type="text" name="tag3" > {Tag}</option>)}

@@ -1,5 +1,5 @@
 .body {
-  margin-left: auto;
+  margin-left: 70px;
   margin-right: auto;
   width: 50em;
   display:flex,
@@ -41,6 +41,15 @@
     outline: none;
     border: none;
   }
+
+  .body_upper{
+    margin-left:70px;
+  }
+
+
+  .selectTag{
+    font-size: 20px;
+  }
    
    
   .input[type="text"],
@@ -71,18 +80,18 @@
     color: #ccc;
   }
    
-  .form-table {
+  .form_table {
     width: 100%;
   }
    
-  .form-table th,
-  .form-table td {
+  .form_table th,
+  .form_table td {
     border-top: 1px solid #d7d7d7;
     border-bottom: 1px solid #d7d7d7;
     padding: 20px;
   }
    
-  .form-table th {
+  .form_table th {
     background: #ffecea;
     padding-left: 50px;
     position: relative;
