@@ -2,7 +2,7 @@ export const nftAddress = "0x5bf2346ae019d9539fbcc1fcd9039fa4cd1987e3";
 
 export const zeroAddress = "0x0000000000000000000000000000000000000000";
 
-export const contractAddress = "0x2429789addb5e7221333697e7de36cd1b5439688";
+export const contractAddress = "0x306459d1b8aab7a6129106e734775224c92c861f";
 
 export const contractAbi = [
 	{
@@ -411,25 +411,6 @@ export const contractAbi = [
 				"internalType": "uint256",
 				"name": "expairTimeStamp",
 				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_Id",
-				"type": "uint256"
-			}
-		],
-		"name": "tagProposalVotersNum",
-		"outputs": [
-			{
-				"internalType": "uint256[2]",
-				"name": "",
-				"type": "uint256[2]"
 			}
 		],
 		"stateMutability": "view",
