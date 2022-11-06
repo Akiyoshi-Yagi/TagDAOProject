@@ -47,77 +47,79 @@ const CreateTokenProposal = (props) => {
     }
 
     return (
-        <div className = {styles.body}>
-            <h1 >Token Application</h1>
-            <h3>Plaease fulllfill the below form in ENGLISH.</h3>
-            <h3>※ An Application takes 1 ETH per token regardless of whether it accepted or not.</h3>
-            
-            <table className="form-table">
-                <tbody>
-                    <tr>
-                        <th>Symbol</th>
-                        <td>
-                            <input className = {styles.textarea} value={symbol} onChange={(e) => setSymbol(e.target.value)} type="text" name="symbol" placeholder="TAG" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Token Address</th>
-                        <td>
-                            <input className = {styles.textarea} value={address} onChange={(e) => setAddress(e.target.value)} type="text" name="address" placeholder="0x77993B6ca64eEAfa427Bc8b4f9945BcF31b7D82c" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Tags 
-                            (CHOOSE 3 Tags)
-                        </th>
-                        
-                        <td>  
-                            <div className={styles.cp_ipselect.cp_sl02}>
-                                <select onChange={(e) => setTag1(e.target.value) } required>
-                                    <option value="" hidden>Choose</option>
-                                    {props.allTags.map(Tag => 
-                                    <option key={Tag} value={Tag}  type="text" name="tag1" > {Tag}</option>)}
-                                </select>
-                                <select onChange={(e) => setTag2(e.target.value) }required>
-                                    <option value="" hidden>Choose</option>
-                                    {props.allTags.map(Tag =>
-                                    <option key={Tag}  value={Tag}  type="text" name="tag2" > {Tag}</option>)}
-                                </select>
-                                <select onChange={(e) => setTag3(e.target.value) } required>
-                                    <option value="" hidden>Choose</option>
-                                    {props.allTags.map(Tag => 
-                                    <option key={Tag}  value={Tag}  type="text" name="tag3" > {Tag}</option>)}
-                                </select>
-                            </div> 
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Discription</th>
-                        <td>
-                            <textarea className = {styles.textarea} value={description} onChange={(e) => setDescription(e.target.value)} name="description" rows={15} placeholder="Summary, reason for choosing 3 tags, dicussion URL, Token home Page, etc..." required></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Voting days </th>
-                        <td>
-                            <input className = {styles.textarea} value={spanDays} onChange={(e) => setSpanDays(e.target.value)} type="number" name="spanDays" placeholder="7" required/>
-                        </td>
-                    </tr>
-
-                    
-                    
-                        
-                    
-
-                    
-                </tbody>
+        <div>
+                <h1 className = {styles.title}>Token Application</h1>
+            <div className = {styles.body}>
+                <h3>Plaease fulllfill the below form in ENGLISH.</h3>
+                <h3>※ An Application takes 1 ETH per token regardless of whether it accepted or not.</h3>
                 
-            </table>
-            <div className={styles.submitfield}>
-                <button className = {styles.submitbutton}  onClick={submitApplication}><span>SUBMIT</span></button>
+                <table className="form-table">
+                    <tbody>
+                        <tr>
+                            <th>Symbol</th>
+                            <td>
+                                <input className = {styles.textarea} value={symbol} onChange={(e) => setSymbol(e.target.value)} type="text" name="symbol" placeholder="TAG" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Token Address</th>
+                            <td>
+                                <input className = {styles.textarea} value={address} onChange={(e) => setAddress(e.target.value)} type="text" name="address" placeholder="0x77993B6ca64eEAfa427Bc8b4f9945BcF31b7D82c" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Tags 
+                                (CHOOSE 3 Tags)
+                            </th>
+                            
+                            <td>  
+                                <div className={styles.cp_ipselect.cp_sl02}>
+                                    <select onChange={(e) => setTag1(e.target.value) } required>
+                                        <option value="" hidden>Choose</option>
+                                        {props.allTags.map(Tag => 
+                                        <option key={Tag} value={Tag}  type="text" name="tag1" > {Tag}</option>)}
+                                    </select>
+                                    <select onChange={(e) => setTag2(e.target.value) }required>
+                                        <option value="" hidden>Choose</option>
+                                        {props.allTags.map(Tag =>
+                                        <option key={Tag}  value={Tag}  type="text" name="tag2" > {Tag}</option>)}
+                                    </select>
+                                    <select onChange={(e) => setTag3(e.target.value) } required>
+                                        <option value="" hidden>Choose</option>
+                                        {props.allTags.map(Tag => 
+                                        <option key={Tag}  value={Tag}  type="text" name="tag3" > {Tag}</option>)}
+                                    </select>
+                                </div> 
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Discription</th>
+                            <td>
+                                <textarea className = {styles.textarea} value={description} onChange={(e) => setDescription(e.target.value)} name="description" rows={15} placeholder="Summary, reason for choosing 3 tags, dicussion URL, Token home Page, etc..." required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Voting days </th>
+                            <td>
+                                <input className = {styles.textarea} value={spanDays} onChange={(e) => setSpanDays(e.target.value)} type="number" name="spanDays" placeholder="7" required/>
+                            </td>
+                        </tr>
+
+                        
+                        
+                            
+                        
+
+                        
+                    </tbody>
+                    
+                </table>
+                <div className={styles.submitfield}>
+                    <button className = {styles.submitbutton}  onClick={submitApplication}><span>SUBMIT</span></button>
+                </div>
+                
             </div>
-            
         </div>
     )
 }

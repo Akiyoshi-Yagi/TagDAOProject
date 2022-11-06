@@ -93,12 +93,9 @@ const ReadSingleProposal = (props) => {
 
                 </div>
                 <div className={styles.votingButton}>
-                    <div className={styles.button}>
-                        <Link href="/proposal/readall"  onClick={pollFor}> FOR</Link>
-                    </div>
-                    <div className={styles.button}>
-                        <Link href="/proposal/readall"  onClick={pollAgainst}> AGAINST</Link>
-                    </div>
+                    <button className={styles.button} onClick={pollFor}> FOR</button>
+                    <h1>&emsp;&emsp;&emsp;&emsp;</h1>
+                    <button  className={styles.button}onClick={pollAgainst}> AGAINST</button>
                 </div>
                 
 

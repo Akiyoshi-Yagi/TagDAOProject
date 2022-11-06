@@ -33,7 +33,9 @@
   }
   .votingButton{
     display:flex;
-    margin-left:110px;
+    text-align: center;
+    margin-left: 450px;
+    
   }
 
   .button {
@@ -49,7 +51,7 @@
     font-size: 40px;
     width: 200px;
     justify-content: center;
-    margin-left:270px;
+    border:none
   }
 
   .voteCheck

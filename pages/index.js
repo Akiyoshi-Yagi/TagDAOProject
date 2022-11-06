@@ -30,34 +30,37 @@ export default function Landing(props) {
       }
     };
 
-    const connectWallet = async (e) => {
-      try {
-        const { ethereum } = window;
-        if (!ethereum) {
-            Swal.fire("Get MetaMask!");
-            return;
-        }
-
-        if(currentAccount){
-            localStorage.setItem("address", currentAccount)
-            Swal.fire("already connected!");
-            router.push("/home")
-            return;
-        };
-        
-        const accounts = await ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        Swal.fire("Success in conenecting to  MetaMask!");
-
-        setCurrentAccount(accounts[0]);
-        localStorage.setItem("address", currentAccount)
-        router.push("/home")
-      } catch (error) {
-        console.log(error);
+  const connectWallet = async (e) => {
+    try {
+      const { ethereum } = window;
+      if (!ethereum) {
+          Swal.fire("Get MetaMask!");
+          return;
       }
-    };
 
+      if(currentAccount){
+          localStorage.setItem("address", currentAccount)
+          Swal.fire("already connected!");
+          router.push("/home")
+          return;
+      };
+      
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      Swal.fire("Success in conenecting to  MetaMask!");
+
+      setCurrentAccount(accounts[0]);
+      localStorage.setItem("address", currentAccount)
+      router.push("/home")
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const transitionHome = () => {
+    router.push("/home");
+  }
   useEffect(() => {
     checkIfWalletIsConnected();
   }, []); 
@@ -66,17 +69,26 @@ export default function Landing(props) {
       
       <main className={styles.main}>
         <Image src="/tagdao.png"  width={600} height={500} />
-
-        <div className={styles.grid}>
-          <button className={styles.card} onClick={connectWallet}>
-            <h2>connect wallet &rarr;</h2>
-            <p>
-              Before starting, 
-            </p> 
-            <p> 
-              you need to install and connedt your metamask
-            </p>
-          </button>
+        <div className={styles.underButton}>
+          <div className={styles.grid}>
+            <button className={styles.card} onClick={connectWallet}>
+              <h2>Connect Metamask &rarr;</h2>
+              <p> 
+                you can connect your metamask from here.
+              </p>
+            </button>
+          </div>
+          <div className={styles.grid}>
+            <button className={styles.card} onClick={transitionHome}>
+              <h2>Guest Login &rarr;</h2>
+              <p>
+                 If you don&#039;t have metamask,
+              </p> 
+              <p> 
+                you can enter from here.
+              </p>
+            </button>
+          </div>
         </div>
       </main>
 

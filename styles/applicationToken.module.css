@@ -4,6 +4,16 @@
   width: 50em;
   display:flex,
 }
+
+.title{
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  color: black;/*文字色*/
+  background: #f4f4f4;/*背景色*/
+  border-left: solid 5px #e2820e;/*左線*/
+  border-bottom: solid 3px #d7d7d7;/*下線*/
+  margin-left:70px;
+}
+
 .table {
     border-collapse: collapse;
   }

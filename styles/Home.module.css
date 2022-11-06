@@ -66,10 +66,10 @@
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   width: 200px;
   justify-content: center;
-  margin-left:250px;
+  border:none
 }
 
 .button_loc{
