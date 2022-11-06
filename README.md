@@ -1,5 +1,23 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+##プロダクト概要
+##使用したtech stacks
+Next.js / infura / web3.js / metamask / ethereum
+package.jsonにalchemyやmongoDBも載っていますが、今回は使っていません（途中で使うのをやめました）
+##使用したBlockchain
+ethereum goerli testnet
+##deployしたContract
+DAOのsmart contract：
+DAO内のTokenのsmart contract：
+##application codeやその他のfile
+特になし
+##審査やテストのためにプロジェクトにアクセスする方法など
+アプリURL：https://tag-dao-project.vercel.app/
+管理者画面：https://tag-dao-project.vercel.app/admin
+（時間の都合でログイン機能等なしの誰でもアクセスできる管理画面になっています）
+
+以下、具体的なプロジェクトのテスト方法
+
 ## Getting Started
 
 First, run the development server:
